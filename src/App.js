@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components/macro';
 
-function App() {
+import Header from './layouts/Header';
+import GlobalStyle from './Global';
+import { Button, Card } from './elements';
+import Timer from './components/Timer';
+
+import '@blueprintjs/core/lib/css/blueprint.css';
+import '@blueprintjs/icons/lib/css/blueprint-icons.css';
+
+// const theme = {
+//   colors: {
+//     primary: '#Ef4B4B',
+//     secondary: '#DBDE61',
+//   },
+// };
+// const themeTwo = {
+//   colors: {
+//     primary: '#524763',
+//     secondary: '#82D8D8',
+//   },
+// };
+
+// const themes = [theme, themeTwo];
+
+const App = () => {
+  // const [currentTheme, setTheme] = useState(0);
+
+  // const toggleTheme = () => setTheme(currentTheme === 0 ? 1 : 0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <GlobalStyle />
+      <main
+      //css={`
+      //  background: blue;
+      //  h2 {
+      //    font-size: 100px;
+      //  }
+      // `}
+      >
+        {/* <Button onClick={toggleTheme}>Toggle Theme</Button> */}
+        {/* <Card>
+          <h2>Card Heading</h2>
+          <Card.Button href="#">Save</Card.Button>
+          <Card.Button modifiers="cancel">Cancel</Card.Button>
+        </Card> */}
+
+        <Timer />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
