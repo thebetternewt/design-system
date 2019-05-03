@@ -12,8 +12,6 @@ const Dashboard = () => {
       <GridTimer>
         <Timer />
       </GridTimer>
-      {/* <div> */}
-      {/* <StyledSmallGrid> */}
       <StyledButton>
         <Icon icon={IconNames.HISTORY} iconSize={60} />
         <span>History</span>
@@ -23,13 +21,8 @@ const Dashboard = () => {
         <span>Timesheets</span>
       </StyledButton>
       <StyledButton />
-      {/* <StyledButton /> */}
-      {/* <StyledButton /> */}
-      {/* <StyledButton /> */}
-      {/* <StyledButton /> */}
-      {/* <StyledButton /> */}
-      {/* </StyledSmallGrid> */}
-      {/* </div> */}
+      <StyledButton />
+      <StyledButton />
     </StyledGrid>
   );
 };

@@ -4,6 +4,7 @@ import { Icon, Intent } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 import logo from '../logo.svg';
 import { DARK_BLUEGRAY, elevation, fixed, serif } from '../utilities';
+import Sidebar from '../components/Sidebar';
 
 const Header = ({ className }) => (
   <header className={className}>
@@ -13,15 +14,16 @@ const Header = ({ className }) => (
        */}
       <Icon
         icon={IconNames.TIME}
-        iconSize={40}
+        iconSize={36}
         style={{ marginRight: '0.8rem' }}
       />
       Shift
     </div>
-    <Nav>
+    {/* <Nav>
       <a href="#">Dashboard</a>
       <a href="#">Admin</a>
-    </Nav>
+    </Nav> */}
+    <Sidebar />
   </header>
 );
 
