@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components/macro';
 
 import Header from './layouts/Header';
 import GlobalStyle from './Global';
-import { Button, Card } from './elements';
+import { Button, Card, Container } from './elements';
 import Timer from './components/Timer2';
 
 import '@blueprintjs/core/lib/css/blueprint.css';
@@ -34,14 +34,7 @@ const App = () => {
     <div>
       <Header />
       <GlobalStyle />
-      <main
-      //css={`
-      //  background: blue;
-      //  h2 {
-      //    font-size: 100px;
-      //  }
-      // `}
-      >
+      <main>
         {/* <Button onClick={toggleTheme}>Toggle Theme</Button> */}
         {/* <Card>
           <h2>Card Heading</h2>
@@ -50,7 +43,9 @@ const App = () => {
         </Card> */}
 
         {/* <Timer /> */}
-        <Dashboard />
+        <Container>
+          <Dashboard />
+        </Container>
       </main>
     </div>
   );

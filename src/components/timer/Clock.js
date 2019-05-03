@@ -51,50 +51,10 @@ const StyledTimer = styled.div`
     }
   }
 
-  /* .hours {
-    .value {
-      font-size: 3rem;
-      line-height: 3.1rem;
-    }
-  }
-
-  .minutes,
-  .seconds {
-    margin: 0 1rem;
-    
-    .value {
-      font-size: 2.5rem;
-    }
-  } */
-  
   .minutes-seconds-wrapper {
     display: flex;
     margin: 1rem;
   }
-
-  /* ${below.sm`
-    .hours,
-    .minutes,
-    .seconds {
-      .label {
-        font-size: 1rem;
-      }
-    }
-
-    .hours {
-      .value {
-        font-size: 4rem;
-      }
-    }
-
-    .minutes,
-    .seconds {
-
-      .value {
-        font-size: 2rem;
-      }
-    }
-  `} */
 `;
 
 export default Clock;

@@ -1,14 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components/macro';
+import { Icon, Intent } from '@blueprintjs/core';
+import { IconNames } from '@blueprintjs/icons';
 import logo from '../logo.svg';
 import { DARK_BLUEGRAY, elevation, fixed, serif } from '../utilities';
 
 const Header = ({ className }) => (
   <header className={className}>
-    <img src={logo} alt="logo" className="logo" />
-    Styled Systems
+    <div className="logo">
+      {/* <img src={logo} alt="logo" className="logo" />
+      
+       */}
+      <Icon
+        icon={IconNames.TIME}
+        iconSize={40}
+        style={{ marginRight: '0.8rem' }}
+      />
+      Shift
+    </div>
+    <Nav>
+      <a href="#">Dashboard</a>
+      <a href="#">Admin</a>
+    </Nav>
   </header>
 );
+
+const Nav = styled.nav`
+  display: flex;
+
+  a {
+    color: inherit;
+    display: block;
+    padding: 0 1rem;
+  }
+`;
 
 export default styled(Header)`
   background-color: ${DARK_BLUEGRAY};
@@ -22,9 +47,13 @@ export default styled(Header)`
 
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
-
+  justify-content: space-between;
+  font-size: 1.3rem;
+  
   .logo {
-    width: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
   }
 `;

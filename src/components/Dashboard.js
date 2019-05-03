@@ -23,11 +23,11 @@ const Dashboard = () => {
         <span>Timesheets</span>
       </StyledButton>
       <StyledButton />
-      <StyledButton />
-      <StyledButton />
-      <StyledButton />
-      <StyledButton />
-      <StyledButton />
+      {/* <StyledButton /> */}
+      {/* <StyledButton /> */}
+      {/* <StyledButton /> */}
+      {/* <StyledButton /> */}
+      {/* <StyledButton /> */}
       {/* </StyledSmallGrid> */}
       {/* </div> */}
     </StyledGrid>
@@ -36,7 +36,7 @@ const Dashboard = () => {
 
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 150px);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 180px));
   grid-auto-rows: 150px;
   gap: 15px;
 
@@ -45,6 +45,10 @@ const StyledGrid = styled.div`
   justify-items: center;
 
   margin: 2rem auto;
+
+  ${below.sm`
+    grid-template-columns: 1fr 1fr;
+  `}
 `;
 
 const GridTimer = styled.div`
