@@ -52,7 +52,7 @@ const Timer = () => {
         }}
       >
         {isClockedIn ? (
-          <h3 style={{ margin: 0 }}>Clock into {selectedDept.name}</h3>
+          <h3 style={{ margin: 0 }}>Clocked into {selectedDept.name}</h3>
         ) : (
           <Select
             // activeItem={selectedDept}
@@ -73,6 +73,8 @@ const Timer = () => {
             <BpButton
               text={selectedDept ? selectedDept.name : 'Select Department'}
               rightIcon="double-caret-vertical"
+              large
+              fill
             />
           </Select>
         )}

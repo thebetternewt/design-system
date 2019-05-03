@@ -4,10 +4,11 @@ import { ThemeProvider } from 'styled-components/macro';
 import Header from './layouts/Header';
 import GlobalStyle from './Global';
 import { Button, Card } from './elements';
-import Timer from './components/Timer';
+import Timer from './components/Timer2';
 
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
+import Dashboard from './components/Dashboard';
 
 // const theme = {
 //   colors: {
@@ -48,7 +49,8 @@ const App = () => {
           <Card.Button modifiers="cancel">Cancel</Card.Button>
         </Card> */}
 
-        <Timer />
+        {/* <Timer /> */}
+        <Dashboard />
       </main>
     </div>
   );
