@@ -3,12 +3,12 @@ import { ThemeProvider } from 'styled-components/macro';
 
 import Header from './layouts/Header';
 import GlobalStyle from './Global';
-import { Button, Card, Container } from './elements';
-import Timer from './components/Timer2';
+import { Container } from './elements';
+import Timer from './components/Timer';
 
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
-import Dashboard from './components/Dashboard';
+import Routes from './Routes';
 
 // const theme = {
 //   colors: {
@@ -44,7 +44,7 @@ const App = () => {
 
         {/* <Timer /> */}
         <Container>
-          <Dashboard />
+          <Routes />
         </Container>
       </main>
     </div>

@@ -4,12 +4,14 @@ import { animated, useSpring } from 'react-spring';
 import { Icon, Intent } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 import { fixed } from '../utilities';
+import NavLinks from './NavLinks';
 
 const Container = styled(animated.div)`
   height: calc(100vh - 20px);
   width: 250px;
   margin: 10px;
-  background-color: #eee;
+  padding: 20px;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -18,20 +20,19 @@ const Container = styled(animated.div)`
   z-index: 100;
 
   nav {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 
   button {
-    background-color: #373142;
-    color: #fff;
+    background-color: transparent;
     border: none;
-    border-radius: 3px;
     font-size: 1rem;
-    padding: 5px 8px;
+    font-weight: 500;
+    cursor: pointer;
 
     position: absolute;
     top: 15px;
-    left: 15px;
+    left: 12px;
   }
 `;
 
@@ -63,28 +64,18 @@ const SidebarWrapper = () => {
     transform: isOpen
       ? `translate3d(0,0,0) scale(1) rotate(0deg)`
       : `translate3d(400px,0,0) scale(0.5) rotate(20deg)`,
-    // config: config.wobbly,
   });
 
   const toggleSidebar = () => setOpen(!isOpen);
 
   return (
     <>
-      {isOpen && <Overlay />}
+      {isOpen && <Overlay onClick={toggleSidebar} />}
       <MenuButton onClick={toggleSidebar}>
         <Icon icon={IconNames.MENU} iconSize={30} />
       </MenuButton>
       <Sidebar style={sidebarAnimation} close={toggleSidebar}>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Dashboard</a>
-            </li>
-            <li>
-              <a href="#">Admin</a>
-            </li>
-          </ul>
-        </nav>
+        <NavLinks closeSidebar={toggleSidebar} />
       </Sidebar>
     </>
   );
