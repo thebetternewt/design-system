@@ -7,12 +7,19 @@ import DepartmentSelect from '../shared/DepartmentSelect';
 const ClockIn = ({ departments, selectedDept, handleDeptSelect, clockIn }) => {
   return (
     <div
-      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: 300,
+        maxWidth: '90%',
+      }}
     >
       <DepartmentSelect
         departments={departments}
         selectedDept={selectedDept}
         handleDeptSelect={handleDeptSelect}
+        style={{ width: '100%' }}
       />
       <ClockInButton onClick={clockIn}>Clock In</ClockInButton>
     </div>

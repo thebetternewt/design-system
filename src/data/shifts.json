@@ -1,0 +1,61 @@
+[{
+  "id": "46906c28-80e2-4271-a61f-f2010d0d0b58",
+  "timeIn": "2019-05-06T09:00:00Z",
+  "timeOut": "2019-05-06T13:00:00Z",
+  "deptId": 2,
+  "userId": 3
+}, {
+  "id": "5b196941-33ea-46e6-b222-2c708de91bf7",
+  "timeIn": "2019-05-06T09:00:00Z",
+  "timeOut": "2019-05-06T13:00:00Z",
+  "deptId": 1,
+  "userId": 2
+}, {
+  "id": "3142aa0b-6c1c-46ed-8b14-15a9940da0bc",
+  "timeIn": "2019-05-06T09:00:00Z",
+  "timeOut": "2019-05-06T13:00:00Z",
+  "deptId": 1,
+  "userId": 1
+}, {
+  "id": "feb9bfcd-e063-4014-bca9-570f6d1620f2",
+  "timeIn": "2019-05-05T11:00:00Z",
+  "timeOut": "2019-05-05T14:00:00Z",
+  "deptId": 2,
+  "userId": 1
+}, {
+  "id": "5c6580b6-7562-4b7b-bbab-9cd7125ec790",
+  "timeIn": "2019-05-06T15:00:00Z",
+  "timeOut": "2019-05-06T16:00:00Z",
+  "deptId": 2,
+  "userId": 2
+}, {
+  "id": "58f34d97-a3e9-4211-93fa-71b9a52c4a21",
+  "timeIn": "2019-05-06T08:00:00Z",
+  "timeOut": "2019-05-06T10:22:00Z",
+  "deptId": 2,
+  "userId": 3
+}, {
+  "id": "9b6c886d-46b8-4a06-ae78-f48c3788f944",
+  "timeIn": "2019-05-04T09:40:00Z",
+  "timeOut": "2019-05-04T13:55:00Z",
+  "deptId": 2,
+  "userId": 2
+}, {
+  "id": "6dfa45ac-66e9-46fa-8ce7-4de6b8194a2c",
+  "timeIn": "2019-05-05T8:023:00Z",
+  "timeOut": "2019-05-05T12:55:00Z",
+  "deptId": 2,
+  "userId": 3
+}, {
+  "id": "cb76b584-05ea-4c70-906c-56e5b8b80094",
+  "timeIn": "2019-05-03T09:11:00Z",
+  "timeOut": "2019-05-03T10:35:00Z",
+  "deptId": 2,
+  "userId": 2
+}, {
+  "id": "80bd4d85-935c-4769-b06f-8e169f7b3f3e",
+  "timeIn": "2019-05-06T15:00:00Z",
+  "timeOut": null,
+  "deptId": 1,
+  "userId": 3
+}]

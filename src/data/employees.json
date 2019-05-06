@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "idNumber": "234765533",
+    "netId": "cre48",
+    "fullName": "Chris Eady",
+    "clockedIn": true,
+    "hours": 1.5
+  },
+  {
+    "id": 2,
+    "idNumber": "111222333",
+    "netId": "test123",
+    "fullName": "Test User",
+    "clockedIn": false,
+    "hours": 1.5
+  },
+  {
+    "id": 3,
+    "idNumber": "098765423",
+    "netId": "fb22",
+    "fullName": "Frodo Baggins",
+    "clockedIn": true,
+    "hours": 11.3
+  }
+]

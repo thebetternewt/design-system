@@ -39,7 +39,7 @@ const PayPeriodSelect = ({ handlePayPeriodSelect, selectedPayPeriod }) => {
         <BpButton
           text={selectedPayPeriod ? selectedPayPeriod.id : 'Select PayPeriod'}
           rightIcon="double-caret-vertical"
-          large
+          // large
           style={{ display: 'flex', justifyContent: 'space-between' }}
           fill
         />

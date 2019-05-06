@@ -2,9 +2,14 @@ import React from 'react';
 import { Button as BpButton, MenuItem, Label } from '@blueprintjs/core';
 import { Select } from '@blueprintjs/select';
 
-const DepartmentSelect = ({ departments, handleDeptSelect, selectedDept }) => {
+const DepartmentSelect = ({
+  departments,
+  handleDeptSelect,
+  selectedDept,
+  style,
+}) => {
   return (
-    <Label>
+    <Label style={style}>
       Department
       <Select
         items={departments}
@@ -23,7 +28,7 @@ const DepartmentSelect = ({ departments, handleDeptSelect, selectedDept }) => {
         <BpButton
           text={selectedDept ? selectedDept.name : 'Select Department'}
           rightIcon="double-caret-vertical"
-          large
+          // large
           style={{ display: 'flex', justifyContent: 'space-between' }}
           fill
         />

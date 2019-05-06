@@ -33,7 +33,7 @@ const FiscalYearSelect = ({ handleFiscalYearSelect, selectedFiscalYear }) => {
             selectedFiscalYear ? selectedFiscalYear.id : 'Select Fiscal Year'
           }
           rightIcon="double-caret-vertical"
-          large
+          // large
           style={{ display: 'flex', justifyContent: 'space-between' }}
           fill
         />

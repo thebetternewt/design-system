@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components/macro';
+import { Link } from '@reach/router';
+import styled from 'styled-components';
 import { Icon, Intent } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 import logo from '../logo.svg';
@@ -19,30 +20,20 @@ const Header = ({ className }) => (
       />
       Shift
     </div>
-    {/* <Nav>
-      <a href="#">Dashboard</a>
-      <a href="#">Admin</a>
-    </Nav> */}
-    <Sidebar />
+    <div className="links">
+      <Link to="/">
+        <Icon icon="user" iconSize={20} />
+      </Link>
+      <Sidebar />
+    </div>
   </header>
 );
-
-const Nav = styled.nav`
-  display: flex;
-
-  a {
-    color: inherit;
-    display: block;
-    padding: 0 1rem;
-  }
-`;
 
 export default styled(Header)`
   background-color: ${DARK_BLUEGRAY};
   color: #fff;
   padding: 10px 5%;
   width: 100%;
-  /* ${serif} */
 
   ${fixed()}
   ${elevation[1]};
@@ -50,12 +41,26 @@ export default styled(Header)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.3rem;
-  
+
   .logo {
     display: flex;
     align-items: center;
     font-size: 1.8rem;
     font-weight: 600;
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.3rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      color: inherit;
+      margin-right: 10px;
+      cursor: pointer;
+    }
   }
 `;

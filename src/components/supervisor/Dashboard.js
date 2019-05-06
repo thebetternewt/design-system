@@ -10,44 +10,22 @@ import {
 import { IconNames } from '@blueprintjs/icons';
 
 import DepartmentSelect from '../shared/DepartmentSelect';
-import PayPeriodSelect from '../shared/PayPeriodSelect';
-import FiscalYearSelect from '../shared/FiscalYearSelect';
+import EmployeeDetailDialog from './EmployeeDetailDialog';
 import Indicator from '../shared/Indicator';
 import { Card } from '../../elements/Cards';
 import { BLUEGRAY } from '../../utilities';
 import Grid, { GridButton } from '../../layouts/DashboardGrid';
 import { lighten } from 'polished';
-
-const departments = [{ id: 1, name: 'DIWS' }, { id: 2, name: 'Systems' }];
-const initEmployees = [
-  {
-    id: 1,
-    netId: 'cre48',
-    fullName: 'Chris Eady',
-    clockedIn: true,
-    hours: 1.5,
-  },
-  {
-    id: 2,
-    netId: 'test123',
-    fullName: 'Test User',
-    clockedIn: false,
-    hours: 1.5,
-  },
-  {
-    id: 3,
-    netId: 'fb22',
-    fullName: 'Frodo Baggins',
-    clockedIn: true,
-    hours: 11.3,
-  },
-];
+import initEmployees from '../../data/employees.json';
+import departments from '../../data/departments.json';
 
 const SupervisorDashboard = () => {
-  const [employees, setEmployees] = useState(initEmployees);
   const [dept, setDept] = useState(departments[0]);
-  const [payPeriod, setPayPeriod] = useState();
-  const [fiscalYear, setFiscalYear] = useState();
+  const [employees, setEmployees] = useState(initEmployees);
+  const [employee, setEmployee] = useState();
+  const [employeeDetailDialogOpen, toggleEmployeeDetailDialog] = useState(
+    false
+  );
 
   const clockOut = empId => {
     console.log(empId);
@@ -63,15 +41,21 @@ const SupervisorDashboard = () => {
     setEmployees(updatedEmployees);
   };
 
+  const showEmployeeDetails = empId => {
+    const emp = employees.find(emp => emp.id === empId);
+    setEmployee(emp);
+    toggleEmployeeDetailDialog(true);
+  };
+
   return (
     <div>
       <h1>
-        Supervisor{' '}
-        <span
+        Supervisor
+        {/* <span
           style={{ fontSize: '0.7em', fontWeight: 400, fontStyle: 'italic' }}
         >
           (Pay Period: Current)
-        </span>
+        </span> */}
       </h1>
       <div
         css={css`
@@ -92,19 +76,8 @@ const SupervisorDashboard = () => {
             handleDeptSelect={dept => setDept(dept)}
           />
         </div>
-        <div>
-          <PayPeriodSelect
-            selectedPayPeriod={payPeriod}
-            handlePayPeriodSelect={pp => setPayPeriod(pp)}
-          />
-        </div>
-        <div>
-          <FiscalYearSelect
-            selectedFiscalYear={fiscalYear}
-            handleFiscalYearSelect={fy => setFiscalYear(fy)}
-          />
-        </div>
       </div>
+      <Divider style={{ margin: '1rem 0' }} />
       <div>
         <h2>Employees</h2>
         <div
@@ -150,7 +123,12 @@ const SupervisorDashboard = () => {
                         Clock Out
                       </BpButton>
                     )}
-                    <BpButton intent={Intent.PRIMARY}>Details</BpButton>
+                    <BpButton
+                      intent={Intent.PRIMARY}
+                      onClick={() => showEmployeeDetails(emp.id)}
+                    >
+                      Details
+                    </BpButton>
                   </div>
                 </EmployeeCard>
               </li>
@@ -175,6 +153,11 @@ const SupervisorDashboard = () => {
           <span>History</span>
         </GridButton>
       </Grid>
+      <EmployeeDetailDialog
+        employee={employee}
+        isOpen={employeeDetailDialogOpen}
+        close={() => toggleEmployeeDetailDialog(false)}
+      />
     </div>
   );
 };

@@ -12,6 +12,7 @@ const Container = styled(animated.div)`
   margin: 10px;
   padding: 20px;
   background-color: #fff;
+  color: #000;
   border-radius: 10px;
   box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.6);
   position: absolute;
